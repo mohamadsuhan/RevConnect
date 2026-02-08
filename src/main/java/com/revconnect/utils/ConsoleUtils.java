@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@SuppressWarnings({"unused", "SameParameterValue"})
 public class ConsoleUtils {
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -23,7 +24,10 @@ public class ConsoleUtils {
             }
         } catch (final Exception e) {
             // If clearing fails, just print some newlines
-            System.out.println("\n".repeat(50));
+            // FIXED: Using loop instead of .repeat() for Java 8 compatibility
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
         }
     }
 
@@ -110,9 +114,9 @@ public class ConsoleUtils {
             System.out.print(prompt + " (y/n): ");
             String input = scanner.nextLine().trim().toLowerCase();
 
-            if (input.equals("y") || input.equals("yes")) {
+            if ("y".equals(input) || "yes".equals(input)) {
                 return true;
-            } else if (input.equals("n") || input.equals("no")) {
+            } else if ("n".equals(input) || "no".equals(input)) {
                 return false;
             } else {
                 System.out.println("Please enter 'y' for yes or 'n' for no.");
@@ -185,7 +189,7 @@ public class ConsoleUtils {
         bar.append("] ");
         bar.append(percentage).append("%");
 
-        System.out.print("\r" + bar.toString());
+        System.out.print("\r" + bar);
 
         if (percentage == 100) {
             System.out.println();
@@ -257,7 +261,7 @@ public class ConsoleUtils {
         System.out.println("══════════════════════════════════════");
 
         for (int i = startIndex; i < endIndex; i++) {
-            System.out.println((i + 1) + ". " + items.get(i).toString());
+            System.out.println((i + 1) + ". " + items.get(i));
         }
 
         System.out.println("══════════════════════════════════════");
@@ -334,7 +338,9 @@ public class ConsoleUtils {
 
     // Close scanner (call at end of application)
     public static void closeScanner() {
-        scanner.close();
+        if (scanner != null) {
+            scanner.close();
+        }
     }
 
     // Test utility methods
@@ -366,5 +372,8 @@ public class ConsoleUtils {
         System.out.println("\nHello " + name + ", you are " + age + " years old.");
 
         pressEnterToContinue();
+
+        // Close scanner after test
+        closeScanner();
     }
 }

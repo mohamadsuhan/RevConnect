@@ -6,6 +6,7 @@ import com.revconnect.services.PostService;
 import com.revconnect.services.ConnectionService;
 import com.revconnect.services.NotificationService;
 import com.revconnect.models.User;
+import com.revconnect.utils.ConsoleUtils;
 
 import java.util.Scanner;
 
@@ -28,10 +29,8 @@ public class ConsoleUI {
     }
 
     public void start() {
-        System.out.println("╔══════════════════════════════════════╗");
-        System.out.println("║      Welcome to RevConnect!          ║");
-        System.out.println("║   Professional Networking Platform   ║");
-        System.out.println("╚══════════════════════════════════════╝");
+        // Show banner ONLY HERE - using ConsoleUtils for consistent formatting
+        ConsoleUtils.printBanner();
 
         boolean exit = false;
 
@@ -56,7 +55,7 @@ public class ConsoleUI {
         System.out.println("3. Exit");
         System.out.print("Enter your choice: ");
 
-        int choice = getIntInput(1, 3); // Changed from 1,4 to 1,3
+        int choice = getIntInput(1, 3);
 
         switch (choice) {
             case 1:
@@ -66,7 +65,7 @@ public class ConsoleUI {
                 register();
                 break;
             case 3:
-                System.exit(0); // Exit the application
+                System.exit(0);
                 break;
         }
     }
