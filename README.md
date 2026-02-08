@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-﻿[PASTE THE ENTIRE README CONTENT HERE]
-=======
+
 # RevConnect - Professional Networking Platform 💼
 
 [![Java](https://img.shields.io/badge/Java-11-blue.svg)](https://www.java.com/)
@@ -335,13 +333,3 @@ git commit -m "Add comprehensive README"
 git push origin main
 Add supporting files (optional):
 
-LICENSE file
-
-.github/ folder with templates
-
-docs/ folder with additional documentation
-
-This README makes your project look professional and helps others understand, use, and contribute to your work!
-
-
->>>>>>> fa2fa58fcbe19518206af73bb72248a2458d1af9
