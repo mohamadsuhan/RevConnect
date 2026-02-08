@@ -1,4 +1,5 @@
 ## 📁 Project Structure
+```text
 RevConnect/
 │
 ├── src/main/java/com/revconnect/
@@ -58,4 +59,4 @@ RevConnect/
 │
 ├── pom.xml # Maven configuration
 └── README.md # Project documentation
-
+```
