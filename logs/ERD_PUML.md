@@ -1,4 +1,4 @@
-@startuml RevConnect_ER_Diagram
+```text @startuml RevConnect_ER_Diagram
 
 ' =============================================
 ' REVCONNECT ENTITY RELATIONSHIP DIAGRAM
@@ -238,4 +238,4 @@ note top of notifications
 'CONNECTION_ACCEPTED', 'NEW_FOLLOWER'))
 end note
 
-@enduml
+@enduml 
