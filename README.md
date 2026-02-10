@@ -280,13 +280,6 @@ Update documentation as needed
 
 Follow the existing code style
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-👥 Team
-Your Name - Lead Developer - GitHub
-
-Contributors - See contributors
 
 🙏 Acknowledgments
 Inspired by LinkedIn and other professional networking platforms
@@ -300,36 +293,5 @@ For support, please:
 
 Check the Troubleshooting section
 
-Search existing Issues
 
-Create a new issue with detailed information
-
-<div align="center">
-⭐ Star this repository if you find it helpful!
-https://img.shields.io/github/followers/yourusername?label=Follow&style=social
-https://img.shields.io/twitter/follow/yourusername?style=social
-
-Built with ❤️ using Java, MySQL, and Maven
-
-</div> ```
-How to Use This README:
-Save as README.md in your project root
-
-Customize sections:
-
-Replace yourusername with your GitHub username
-
-Add your name in the Team section
-
-Update features based on what you've implemented
-
-Add actual screenshots (replace placeholder URLs)
-
-Add to GitHub:
-
-bash
-git add README.md
-git commit -m "Add comprehensive README"
-git push origin main
-Add supporting files (optional):
 
